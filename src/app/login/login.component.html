@@ -1,0 +1,27 @@
+<div class="ocean"> 
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+  <div class="container">
+    <form class="form" [formGroup]="authForm" (ngSubmit)="authenticate()">
+      <div class="form__subtitle">Create your account</div>
+      <mat-form-field class="m-bottom">
+        <input matInput placeholder="Your nickname" [formControl]="authForm.controls.name" required>
+        <mat-error *ngIf="authForm.invalid">{{getErrMsgNick()}}</mat-error>
+      </mat-form-field>
+      <mat-form-field class="m-bottom">
+        <input matInput placeholder="Email" [formControl]="authForm.controls.email" required>
+        <mat-error *ngIf="authForm.invalid">{{getErrMsgEmail()}}</mat-error>
+      </mat-form-field>
+      <button mat-raised-button [disabled]="!authForm.valid" color="primary" type="submit">Get started</button>
+    </form>
+  </div>
+</div>

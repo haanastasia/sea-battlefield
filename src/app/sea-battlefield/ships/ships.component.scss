@@ -1,0 +1,15 @@
+.ships{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 300px;
+  margin: 20px;
+}
+.ship{
+  margin: 10px;
+}
+.selectedShip{
+  border-bottom: 2px solid grey;
+}
